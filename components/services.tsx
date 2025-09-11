@@ -26,7 +26,7 @@ export function Services() {
       icon: <FileCheck className="h-10 w-10 text-orange-500" />,
       title: "Audit de votre parc EEG",
       description:
-        "Audit complet et sur-mesure de votre parc EEG. Nos experts vérifient le bon fonctionnement de vos installations et rédigent un rapport détaillé. En cas de problème, nous vous fournissons les documents nécessaires pour vous protéger juridiquement et assurer la continuité de vos opérations.",
+      "Audit complet et personnalisé de votre parc EEG. Nos experts contrôlent vos installations, rédigent un rapport détaillé et fournissent les documents nécessaires pour assurer votre protection et la continuité de vos opérations.",
     },
     {
       icon: <LineChart className="h-10 w-10 text-sky-500" />,
