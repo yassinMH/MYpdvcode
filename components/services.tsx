@@ -1,4 +1,4 @@
-import { Tag, Users, LineChart, Search, Wifi } from "lucide-react"
+import { Tag, Users, LineChart, Search,FileCheck , Wifi } from "lucide-react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import Image from "next/image"
 
@@ -23,10 +23,10 @@ export function Services() {
         "Solutions complètes et sur-mesure pour le remplacement des piles de vos étiquettes électroniques avec optimisation de leur durée de vie.",
     },
     {
-      icon: <Users className="h-10 w-10 text-orange-500" />,
-      title: "Mobiliser des intérimaires qualifiés",
+      icon: <FileCheck className="h-10 w-10 text-orange-500" />,
+      title: "Audit de votre parc EEG",
       description:
-        "Mise à disposition rapide d'intérimaires ELS au meilleur prix, selon vos besoins spécifiques et votre performance client.",
+        "Audit complet et sur-mesure de votre parc EEG. Nos experts vérifient le bon fonctionnement de vos installations et rédigent un rapport détaillé. En cas de problème, nous vous fournissons les documents nécessaires pour vous protéger juridiquement et assurer la continuité de vos opérations.",
     },
     {
       icon: <LineChart className="h-10 w-10 text-sky-500" />,
