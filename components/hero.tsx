@@ -68,7 +68,7 @@ export function Hero() {
                 playsInline
                 poster="/images/mission_1.jpg" // Image de fallback
               >
-                <source src="/public/Videos/Promotion-video.mp4" type="video/mp4" />
+                <source src="/images/Promotion-video.mp4" type="video/mp4" />
                 Votre navigateur ne supporte pas la lecture vidéo.
               </video>
 
