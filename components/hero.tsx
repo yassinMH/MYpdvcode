@@ -84,17 +84,20 @@ export function Hero() {
             <div className="relative rounded-lg overflow-hidden shadow-2xl bg-navy/5 aspect-video">
               {/* Écran de chargement "VU À LA TV" */}
               {showSplash && (
-                <div className="absolute inset-0 z-10 flex items-center justify-center bg-white transition-opacity duration-500">
-                  <div className="text-center">
-                    <Image
-                      src="/images/vulatele.jpeg"
-                      alt="Vu à la TV"
-                      width={300}
-                      height={300}
-                      className="mx-auto mb-4 animate-pulse"
-                    />
-                    <div className="flex justify-center mt-4">
-                      <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-orange-500"></div>
+                <div className="absolute inset-0 z-10 flex items-center justify-center bg-white transition-opacity duration-500 p-4">
+                  <div className="text-center max-w-full">
+                    <div className="relative w-full max-w-[200px] sm:max-w-[250px] md:max-w-[300px] mx-auto">
+                      <Image
+                        src="/images/vulatele.jpeg"
+                        alt="Vu à la TV"
+                        width={300}
+                        height={300}
+                        className="w-full h-auto animate-pulse"
+                        priority
+                      />
+                    </div>
+                    <div className="flex justify-center mt-2 sm:mt-4">
+                      <div className="animate-spin rounded-full h-4 w-4 sm:h-6 sm:w-6 border-b-2 border-orange-500"></div>
                     </div>
                   </div>
                 </div>
@@ -124,38 +127,42 @@ export function Hero() {
 
               {/* Contrôles vidéo (visibles seulement après le splash) */}
               {!showSplash && (
-                <div className="absolute bottom-4 right-4 flex gap-2">
+                <div className="absolute bottom-2 right-2 sm:bottom-4 sm:right-4 flex gap-1 sm:gap-2">
                   <button
                     onClick={togglePlay}
-                    className="bg-white/90 hover:bg-white rounded-full p-2 transition-colors shadow-lg"
+                    className="bg-white/90 hover:bg-white rounded-full p-1.5 sm:p-2 transition-colors shadow-lg"
                     aria-label={isPlaying ? "Pause" : "Play"}
                   >
                     {isPlaying ? (
-                      <div className="w-4 h-4 bg-navy rounded-sm"></div>
+                      <div className="w-3 h-3 sm:w-4 sm:h-4 bg-navy rounded-sm"></div>
                     ) : (
-                      <Play className="h-4 w-4 text-navy" />
+                      <Play className="h-3 w-3 sm:h-4 sm:w-4 text-navy" />
                     )}
                   </button>
                   <button
                     onClick={toggleMute}
-                    className="bg-white/90 hover:bg-white rounded-full p-2 transition-colors shadow-lg"
+                    className="bg-white/90 hover:bg-white rounded-full p-1.5 sm:p-2 transition-colors shadow-lg"
                     aria-label={isMuted ? "Activer le son" : "Couper le son"}
                   >
-                    {isMuted ? <VolumeX className="h-4 w-4 text-navy" /> : <Volume2 className="h-4 w-4 text-navy" />}
+                    {isMuted ? (
+                      <VolumeX className="h-3 w-3 sm:h-4 sm:w-4 text-navy" />
+                    ) : (
+                      <Volume2 className="h-3 w-3 sm:h-4 sm:w-4 text-navy" />
+                    )}
                   </button>
                 </div>
               )}
 
               {/* Overlay informatif */}
               {!showSplash && isMuted && (
-                <div className="absolute top-4 left-4 bg-navy/80 text-white px-3 py-1 rounded-full text-sm">
+                <div className="absolute top-2 left-2 sm:top-4 sm:left-4 bg-navy/80 text-white px-2 py-1 sm:px-3 sm:py-1 rounded-full text-xs sm:text-sm">
                   Cliquez sur 🔊 pour activer le son
                 </div>
               )}
             </div>
 
             {/* Texte sous la vidéo */}
-            <p className="text-center text-navy/60 mt-4 text-sm">
+            <p className="text-center text-navy/60 mt-4 text-xs sm:text-sm">
               {showSplash
                 ? "Chargement de la vidéo promotionnelle..."
                 : "Découvrez My PDV en action - 15 ans d'expertise en étiquetage électronique"}
