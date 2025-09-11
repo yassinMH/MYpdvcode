@@ -13,21 +13,55 @@ export function Hero() {
   const [videoLoaded, setVideoLoaded] = useState(false)
   const videoRef = useRef<HTMLVideoElement>(null)
 
-  // Afficher l'image "VU À LA TV" pendant 3 secondes
+  // Afficher l'image "VU À LA TV" pendant 3 secondes puis démarrer la vidéo
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowSplash(false)
-      // Démarrer la vidéo après l'écran de chargement
+      // Démarrer la vidéo immédiatement après que l'image disparaisse
       setTimeout(() => {
-        if (videoRef.current && videoLoaded) {
-          videoRef.current.play()
-          setIsPlaying(true)
-        }
-      }, 500)
+        startVideo()
+      }, 100) // Délai très court pour la transition
     }, 3000)
 
     return () => clearTimeout(timer)
-  }, [videoLoaded])
+  }, [])
+
+  // Fonction pour démarrer la vidéo de manière fiable
+  const startVideo = async () => {
+    if (videoRef.current) {
+      try {
+        // S'assurer que la vidéo est prête
+        if (videoRef.current.readyState >= 2) {
+          await videoRef.current.play()
+          setIsPlaying(true)
+        } else {
+          // Si la vidéo n'est pas encore prête, attendre qu'elle le soit
+          videoRef.current.addEventListener(
+            "canplay",
+            async () => {
+              try {
+                await videoRef.current?.play()
+                setIsPlaying(true)
+              } catch (error) {
+                console.log("Autoplay bloqué par le navigateur:", error)
+              }
+            },
+            { once: true },
+          )
+        }
+      } catch (error) {
+        console.log("Autoplay bloqué par le navigateur:", error)
+        // La vidéo ne peut pas démarrer automatiquement, mais elle sera prête au clic
+      }
+    }
+  }
+
+  // Démarrer la vidéo dès que possible si l'image a déjà disparu
+  useEffect(() => {
+    if (!showSplash && videoLoaded && !isPlaying) {
+      startVideo()
+    }
+  }, [showSplash, videoLoaded, isPlaying])
 
   const toggleMute = () => {
     if (videoRef.current) {
@@ -50,6 +84,18 @@ export function Hero() {
 
   const handleVideoLoad = () => {
     setVideoLoaded(true)
+    // Si l'image a déjà disparu, démarrer la vidéo immédiatement
+    if (!showSplash) {
+      startVideo()
+    }
+  }
+
+  const handleVideoPlay = () => {
+    setIsPlaying(true)
+  }
+
+  const handleVideoPause = () => {
+    setIsPlaying(false)
   }
 
   return (
@@ -112,7 +158,10 @@ export function Hero() {
                 muted
                 loop
                 playsInline
+                preload="auto"
                 onLoadedData={handleVideoLoad}
+                onPlay={handleVideoPlay}
+                onPause={handleVideoPause}
                 onError={(e) => {
                   console.error("Erreur de chargement vidéo:", e)
                 }}
