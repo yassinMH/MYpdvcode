@@ -93,7 +93,6 @@ export function Hero() {
                       height={300}
                       className="mx-auto mb-4 animate-pulse"
                     />
-                    <p className="text-navy font-semibold text-lg">My PDV - Vu à la télévision</p>
                     <div className="flex justify-center mt-4">
                       <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-orange-500"></div>
                     </div>
