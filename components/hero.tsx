@@ -87,7 +87,7 @@ export function Hero() {
                 <div className="absolute inset-0 z-10 flex items-center justify-center bg-white transition-opacity duration-500">
                   <div className="text-center">
                     <Image
-                      src="/images/vu-a-la-tv.jpeg"
+                      src="/images/vulatele.jpeg"
                       alt="Vu à la TV"
                       width={300}
                       height={300}
