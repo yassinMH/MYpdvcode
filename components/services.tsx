@@ -5,45 +5,37 @@ import Image from "next/image"
 export function Services() {
   const services = [
     {
-      icon: <Tag className="h-8 w-8 md:h-10 md:w-10 text-orange-500" />,
+      icon: <Tag className="h-10 w-10 text-orange-500" />,
       title: "Installer des étiquettes électroniques",
       description:
         "Installation et maintenance sur-mesure d'étiquettes électroniques pour une gestion optimale des prix et un ROI immédiat.",
     },
     {
-      icon: <Wifi className="h-8 w-8 md:h-10 md:w-10 text-sky-500" />,
+      icon: <Wifi className="h-10 w-10 text-sky-500" />,
       title: "Optimiser votre installation réseau",
       description:
         "Installation et maintenance de câblage RJ45 pour une connectivité ultra-performante dès aujourd'hui.",
     },
     {
-      icon: (
-        <Image
-          src="/images/thing-icon.png"
-          alt="Thing Icon"
-          width={32}
-          height={32}
-          className="w-8 h-8 md:w-10 md:h-10"
-        />
-      ),
+      icon: <Image src="/images/thing-icon.png" alt="Thing Icon" width={40} height={40} className="w-10 h-10" />,
       title: "Remplacer vos piles d'étiquettes électroniques",
       description:
         "Solutions complètes et sur-mesure pour le remplacement des piles de vos étiquettes électroniques avec optimisation de leur durée de vie.",
     },
     {
-      icon: <Users className="h-8 w-8 md:h-10 md:w-10 text-orange-500" />,
-      title: "Mobiliser des intérimaires qualifiés",
+      icon: <FileCheck className="h-10 w-10 text-orange-500" />,
+      title: "Audit de votre parc EEG",
       description:
-        "Mise à disposition rapide d'intérimaires ELS au meilleur prix, selon vos besoins spécifiques et votre performance client.",
+      "Audit complet de votre parc EEG avec contrôle de vos installations et de votre matériel En cas de problème, nos rapports d’expertise assure votre protection juridique",
     },
     {
-      icon: <LineChart className="h-8 w-8 md:h-10 md:w-10 text-sky-500" />,
-      title: "Audit et conseil",
+      icon: <LineChart className="h-10 w-10 text-sky-500" />,
+      title: "Conseil",
       description:
-        "Audit complet de votre parc EEG ainsi que conseils personnalisés pour optimiser votre infrastructure et maximiser votre ROI.",
+        "Nous vous accompagnons dans le choix du matériel le plus adapté à vos besoins. Nos experts vous guident pour optimiser vos investissements et maximiser votre ROI",
     },
     {
-      icon: <Search className="h-8 w-8 md:h-10 md:w-10 text-navy" />,
+      icon: <Search className="h-10 w-10 text-navy" />,
       title: "Former vos équipes à l'excellence",
       description:
         "Formation complète et sur-mesure de vos équipes à l'utilisation des outils et technologies installés pour une performance client optimale.",
