@@ -172,7 +172,7 @@ export function Hero() {
               >
                 <source src="/videos/promotion-video.mp4" type="video/mp4" />
                 <source
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Promotion%20video-YxWBP9uHpndA0sva33mmiJDmeY1d9I.mp4"
+                  src="https://tfh2ceao6hcwdtya.public.blob.vercel-storage.com/Promotion-video.mp4"
                   type="video/mp4"
                 />
                 Votre navigateur ne supporte pas la lecture vidéo.
