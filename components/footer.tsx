@@ -4,9 +4,9 @@ import Image from "next/image"
 export function Footer() {
   return (
     <footer className="bg-navy text-white">
-      <div className="container px-4 py-12 md:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="space-y-4">
+      <div className="container px-4 py-8 md:py-16">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8">
+          <div className="space-y-3">
             <Link href="/" className="inline-block">
               <div className="bg-white p-3 rounded-lg inline-block">
                 <Image src="/images/logo.png" alt="My PDV Logo" width={150} height={50} />
@@ -15,8 +15,8 @@ export function Footer() {
             <p className="text-white/70">Votre partenaire pour des magasins connectés et performants.</p>
           </div>
           <div>
-            <h3 className="font-semibold text-white mb-4">Services</h3>
-            <ul className="space-y-2">
+            <h3 className="font-semibold text-white mb-3">Services</h3>
+            <ul className="space-y-1 md:space-y-2">
               <li>
                 <Link href="/#services" className="text-white/70 hover:text-sky-300 transition-colors">
                   Étiquettes Électroniques
@@ -50,8 +50,8 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <h3 className="font-semibold text-white mb-4">À propos</h3>
-            <ul className="space-y-2">
+            <h3 className="font-semibold text-white mb-3">À propos</h3>
+            <ul className="space-y-1 md:space-y-2">
               <li>
                 <Link href="/#experience" className="text-white/70 hover:text-sky-300 transition-colors">
                   Notre Expérience
@@ -70,8 +70,8 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <h3 className="font-semibold text-white mb-4">Contact</h3>
-            <ul className="space-y-2">
+            <h3 className="font-semibold text-white mb-3">Contact</h3>
+            <ul className="space-y-1 md:space-y-2">
               <li className="text-white/70">9h - 15h, Lundi au Vendredi</li>
               <li>
                 <Link href="mailto:contact@my-pdv.com" className="text-white/70 hover:text-sky-300 transition-colors">
@@ -81,7 +81,7 @@ export function Footer() {
             </ul>
           </div>
         </div>
-        <div className="mt-12 pt-8 border-t border-white/10 text-center">
+        <div className="mt-8 pt-6 md:mt-12 md:pt-8 border-t border-white/10 text-center">
           <p className="text-white/70">&copy; {new Date().getFullYear()} My PDV. Tous droits réservés.</p>
           <a
             href="https://rpms-tunisie.com/"

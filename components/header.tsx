@@ -29,9 +29,15 @@ export function Header() {
     <header
       className={`w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50 transition-shadow ${isScrolled ? "shadow-md" : ""}`}
     >
-      <div className="container flex h-20 items-center justify-between px-4">
+      <div className="container flex h-14 md:h-20 items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-2">
-          <Image src="/images/logo.png" alt="My PDV Logo" width={150} height={50} />
+          <Image
+            src="/images/logo.png"
+            alt="My PDV Logo"
+            width={100}
+            height={35}
+            className="md:w-[150px] md:h-[50px]"
+          />
         </Link>
         <nav className="hidden md:flex gap-6">
           <Link href="/" className="text-navy hover:text-sky-500 transition-colors font-medium">
@@ -56,12 +62,12 @@ export function Header() {
           </Button>
         </div>
         <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Toggle menu">
-          {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
       </div>
       {isMenuOpen && (
-        <div className="md:hidden p-4 pt-0 bg-white">
-          <nav className="flex flex-col space-y-4 py-4">
+        <div className="md:hidden p-3 pt-0 bg-white">
+          <nav className="flex flex-col space-y-3 py-3">
             <Link
               href="/"
               className="text-navy hover:text-sky-500 transition-colors font-medium"

@@ -67,12 +67,12 @@ export function About() {
   ]
 
   return (
-    <section id="about" className="py-16 md:py-24 bg-white">
+    <section id="about" className="py-8 md:py-24 bg-white">
       <div className="container px-4 md:px-6">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
-            <h2 className="text-3xl md:text-4xl font-bold text-navy">Notre Mission Sur-Mesure</h2>
-            <div className="space-y-4 text-navy/70">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+          <div className="space-y-4 md:space-y-6">
+            <h2 className="text-2xl md:text-4xl font-bold text-navy">Notre Mission Sur-Mesure</h2>
+            <div className="space-y-3 text-navy/70">
               <p>
                 Chez MyPDV, nous nous engageons à fournir des solutions d'étiquetage électronique et d'aménagement de
                 magasin sur-mesure qui transforment l'expérience d'achat et optimisent les opérations commerciales pour
@@ -142,15 +142,15 @@ export function About() {
       </div>
 
       <div className="mt-16 bg-sky-600 rounded-t-3xl">
-        <div className="container px-4 md:px-6 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="container px-4 md:px-6 py-8 md:py-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {values.map((value, index) => (
-              <div key={index} className="flex items-start space-x-4">
+              <div key={index} className="flex items-start space-x-3 md:space-x-4">
                 <div className="w-12 h-12 rounded-full bg-sky-700 flex items-center justify-center flex-shrink-0">
                   {value.icon}
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{value.title}</h3>
+                  <h3 className="text-lg md:text-xl font-semibold text-white mb-1 md:mb-2">{value.title}</h3>
                   <p className="text-white/80">{value.description}</p>
                 </div>
               </div>

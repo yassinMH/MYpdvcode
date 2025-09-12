@@ -99,40 +99,44 @@ export function Hero() {
   }
 
   return (
-    <section className="py-20 md:py-28 bg-gradient-to-b from-sky-50 to-white">
+    <section className="py-6 md:py-20 lg:py-28 bg-gradient-to-b from-sky-50 to-white">
       <div className="container px-4 md:px-6">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-6 md:gap-12 items-center">
           {/* Contenu textuel */}
-          <div className="flex flex-col space-y-8">
-            <h1 className="text-3xl md:text-5xl font-bold tracking-tighter text-navy">
+          <div className="flex flex-col space-y-3 md:space-y-8 lg:order-1">
+            <h1 className="text-xl md:text-3xl lg:text-5xl font-bold tracking-tighter text-navy leading-tight">
               My PDV, votre expert en étiquetage électronique
             </h1>
-            <p className="text-xl md:text-2xl text-navy/80">
+            <p className="text-sm md:text-xl lg:text-2xl text-navy/80">
               15 ans d'expertise • 1200+ magasins équipés • Solutions sur-mesure
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button asChild size="lg" className="bg-orange-500 hover:bg-orange-600 text-white">
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
+              <Button
+                asChild
+                size="default"
+                className="bg-orange-500 hover:bg-orange-600 text-white text-sm md:text-base"
+              >
                 <Link href="/contact">Contactez-nous dès aujourd'hui</Link>
               </Button>
               <Button
                 asChild
-                size="lg"
+                size="default"
                 variant="outline"
-                className="border-sky-500 text-sky-500 hover:bg-sky-50 bg-transparent"
+                className="border-sky-500 text-sky-500 hover:bg-sky-50 bg-transparent text-sm md:text-base"
               >
                 <Link href="/#services">Découvrez nos services sur-mesure</Link>
               </Button>
             </div>
           </div>
 
-          {/* Zone vidéo avec écran de chargement */}
-          <div className="relative">
-            <div className="relative rounded-lg overflow-hidden shadow-2xl bg-navy/5 aspect-video">
+          {/* Zone vidéo avec écran de chargement - Centrée */}
+          <div className="relative lg:order-2 flex justify-center">
+            <div className="relative rounded-lg overflow-hidden shadow-xl bg-navy/5 aspect-video max-h-[200px] md:max-h-[300px] lg:max-h-none w-full max-w-[400px] lg:max-w-none">
               {/* Écran de chargement "VU À LA TV" */}
               {showSplash && (
-                <div className="absolute inset-0 z-10 flex items-center justify-center bg-white transition-opacity duration-500 p-4">
+                <div className="absolute inset-0 z-10 flex items-center justify-center bg-white transition-opacity duration-500 p-2 md:p-4">
                   <div className="text-center max-w-full">
-                    <div className="relative w-full max-w-[200px] sm:max-w-[250px] md:max-w-[300px] mx-auto">
+                    <div className="relative w-full max-w-[120px] sm:max-w-[150px] md:max-w-[200px] lg:max-w-[250px] mx-auto">
                       <Image
                         src="/images/vulatele.jpeg"
                         alt="Vu à la TV"
@@ -142,8 +146,8 @@ export function Hero() {
                         priority
                       />
                     </div>
-                    <div className="flex justify-center mt-2 sm:mt-4">
-                      <div className="animate-spin rounded-full h-4 w-4 sm:h-6 sm:w-6 border-b-2 border-orange-500"></div>
+                    <div className="flex justify-center mt-1 md:mt-2">
+                      <div className="animate-spin rounded-full h-3 w-3 sm:h-4 sm:w-4 md:h-6 md:w-6 border-b-2 border-orange-500"></div>
                     </div>
                   </div>
                 </div>
@@ -176,45 +180,43 @@ export function Hero() {
 
               {/* Contrôles vidéo (visibles seulement après le splash) */}
               {!showSplash && (
-                <div className="absolute bottom-2 right-2 sm:bottom-4 sm:right-4 flex gap-1 sm:gap-2">
+                <div className="absolute bottom-1 right-1 sm:bottom-2 sm:right-2 md:bottom-4 md:right-4 flex gap-1 sm:gap-2">
                   <button
                     onClick={togglePlay}
-                    className="bg-white/90 hover:bg-white rounded-full p-1.5 sm:p-2 transition-colors shadow-lg"
+                    className="bg-white/90 hover:bg-white rounded-full p-1 sm:p-1.5 md:p-2 transition-colors shadow-lg"
                     aria-label={isPlaying ? "Pause" : "Play"}
                   >
                     {isPlaying ? (
-                      <div className="w-3 h-3 sm:w-4 sm:h-4 bg-navy rounded-sm"></div>
+                      <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 md:w-4 md:h-4 bg-navy rounded-sm"></div>
                     ) : (
-                      <Play className="h-3 w-3 sm:h-4 sm:w-4 text-navy" />
+                      <Play className="h-2.5 w-2.5 sm:h-3 sm:w-3 md:h-4 md:w-4 text-navy" />
                     )}
                   </button>
                   <button
                     onClick={toggleMute}
-                    className="bg-white/90 hover:bg-white rounded-full p-1.5 sm:p-2 transition-colors shadow-lg"
+                    className="bg-white/90 hover:bg-white rounded-full p-1 sm:p-1.5 md:p-2 transition-colors shadow-lg"
                     aria-label={isMuted ? "Activer le son" : "Couper le son"}
                   >
                     {isMuted ? (
-                      <VolumeX className="h-3 w-3 sm:h-4 sm:w-4 text-navy" />
+                      <VolumeX className="h-2.5 w-2.5 sm:h-3 sm:w-3 md:h-4 md:w-4 text-navy" />
                     ) : (
-                      <Volume2 className="h-3 w-3 sm:h-4 sm:w-4 text-navy" />
+                      <Volume2 className="h-2.5 w-2.5 sm:h-3 sm:w-3 md:h-4 md:w-4 text-navy" />
                     )}
                   </button>
                 </div>
               )}
 
-              {/* Overlay informatif */}
+              {/* Overlay informatif - Plus petit sur mobile */}
               {!showSplash && isMuted && (
-                <div className="absolute top-2 left-2 sm:top-4 sm:left-4 bg-navy/80 text-white px-2 py-1 sm:px-3 sm:py-1 rounded-full text-xs sm:text-sm">
-                  Cliquez sur 🔊 pour activer le son
+                <div className="absolute top-1 left-1 sm:top-2 sm:left-2 md:top-4 md:left-4 bg-navy/80 text-white px-1.5 py-0.5 sm:px-2 sm:py-1 md:px-3 md:py-1 rounded-full text-xs">
+                  🔊
                 </div>
               )}
             </div>
 
-            {/* Texte sous la vidéo */}
-            <p className="text-center text-navy/60 mt-4 text-xs sm:text-sm">
-              {showSplash
-                ? "Chargement de la vidéo promotionnelle..."
-                : "Découvrez My PDV en action - 15 ans d'expertise en étiquetage électronique"}
+            {/* Texte sous la vidéo - Plus compact */}
+            <p className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-center text-navy/60 text-xs md:text-sm whitespace-nowrap">
+              {showSplash ? "Chargement..." : "My PDV en action - 15 ans d'expertise"}
             </p>
           </div>
         </div>

@@ -46,15 +46,15 @@ export function Stats() {
   })
 
   return (
-    <section className="py-16 md:py-24 bg-white">
+    <section className="py-8 md:py-24 bg-white">
       <div className="container px-4 md:px-6">
-        <div className="flex flex-col items-center text-center space-y-4 mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-navy">Notre Savoir-Faire en Chiffres</h2>
-          <p className="text-xl text-navy/70 max-w-2xl">
+        <div className="flex flex-col items-center text-center space-y-3 mb-8">
+          <h2 className="text-2xl md:text-4xl font-bold text-navy">Notre Savoir-Faire en Chiffres</h2>
+          <p className="text-base md:text-xl text-navy/70 max-w-2xl">
             Des résultats concrets qui témoignent de notre accompagnement expert et de votre ROI
           </p>
         </div>
-        <div ref={ref} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div ref={ref} className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
           {stats.map((stat, index) => (
             <StatCard key={index} stat={stat} animate={inView} />
           ))}
@@ -97,14 +97,14 @@ function StatCard({ stat, animate }: { stat: any; animate: boolean }) {
 
   return (
     <Card className="border-border/40 shadow-sm hover:shadow-md transition-shadow">
-      <CardContent className="p-6">
-        <div className="flex flex-col items-center text-center space-y-2">
-          <div className="text-4xl font-bold text-orange-500">
+      <CardContent className="p-3 md:p-6">
+        <div className="flex flex-col items-center text-center space-y-1 md:space-y-2">
+          <div className="text-2xl md:text-4xl font-bold text-orange-500">
             {stat.display || count}
             {stat.suffix && <span>{stat.suffix}</span>}
           </div>
-          <div className="text-xl font-medium text-navy">{stat.label}</div>
-          <p className="text-navy/70 mt-2">{stat.description}</p>
+          <div className="text-sm md:text-xl font-medium text-navy">{stat.label}</div>
+          <p className="text-navy/70 mt-1 md:mt-2 text-xs md:text-base">{stat.description}</p>
         </div>
       </CardContent>
     </Card>
