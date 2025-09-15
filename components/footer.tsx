@@ -19,32 +19,32 @@ export function Footer() {
             <ul className="space-y-1 md:space-y-2">
               <li>
                 <Link href="/#services" className="text-white/70 hover:text-sky-300 transition-colors">
-                  Étiquettes Électroniques
+                Installer des étiquettes électroniques
                 </Link>
               </li>
               <li>
                 <Link href="/#services" className="text-white/70 hover:text-sky-300 transition-colors">
-                  Installation Réseau
+                Optimiser votre installation réseau
                 </Link>
               </li>
               <li>
                 <Link href="/#services" className="text-white/70 hover:text-sky-300 transition-colors">
-                  Remplacement de Piles
+                Remplacer vos piles d'étiquettes électroniques
                 </Link>
               </li>
               <li>
                 <Link href="/#services" className="text-white/70 hover:text-sky-300 transition-colors">
-                  Intérimaires Qualifiés
+                Audit de votre parc EEG
                 </Link>
               </li>
               <li>
                 <Link href="/#services" className="text-white/70 hover:text-sky-300 transition-colors">
-                  Audit et Conseil
+                Conseil
                 </Link>
               </li>
               <li>
                 <Link href="/#services" className="text-white/70 hover:text-sky-300 transition-colors">
-                  Formation
+                Former vos équipes à l'excellence
                 </Link>
               </li>
             </ul>

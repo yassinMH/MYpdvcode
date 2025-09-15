@@ -26,7 +26,7 @@ export function Services() {
       icon: <FileCheck className="h-10 w-10 text-orange-500" />,
       title: "Audit de votre parc EEG",
       description:
-      "Audit complet de votre parc EEG avec contrôle de vos installations et de votre matériel En cas de problème, nos rapports d’expertise assure votre protection juridique",
+      "Audit complet de votre parc EEG avec contrôle de vos installations et de votre matériel En cas de problème, nos rapports d’expertise assure votre protection juridique.",
     },
     {
       icon: <LineChart className="h-10 w-10 text-sky-500" />,
