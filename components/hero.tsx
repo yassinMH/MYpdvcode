@@ -13,7 +13,7 @@ export function Hero() {
   const [videoLoaded, setVideoLoaded] = useState(false)
   const videoRef = useRef<HTMLVideoElement>(null)
 
-  // Afficher l'image "VU À LA TV" pendant 3 secondes puis démarrer la vidéo
+  // Afficher l'image "VU À LA TV" pendant 1.5 secondes au lieu de 3
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowSplash(false)
@@ -21,7 +21,7 @@ export function Hero() {
       setTimeout(() => {
         startVideo()
       }, 100) // Délai très court pour la transition
-    }, 3000)
+    }, 1500) // Réduit de 3000ms à 1500ms
 
     return () => clearTimeout(timer)
   }, [])
@@ -138,7 +138,7 @@ export function Hero() {
                   <div className="text-center max-w-full">
                     <div className="relative w-full max-w-[120px] sm:max-w-[150px] md:max-w-[200px] lg:max-w-[250px] mx-auto">
                       <Image
-                        src="/images/vulatele.jpeg"
+                        src="/images/vu-a-la-tv.jpeg"
                         alt="Vu à la TV"
                         width={300}
                         height={300}
@@ -146,6 +146,9 @@ export function Hero() {
                         priority
                       />
                     </div>
+                    <p className="text-navy font-semibold text-xs sm:text-sm md:text-base lg:text-lg mt-1 md:mt-2">
+                      My PDV - Vu à la télévision
+                    </p>
                     <div className="flex justify-center mt-1 md:mt-2">
                       <div className="animate-spin rounded-full h-3 w-3 sm:h-4 sm:w-4 md:h-6 md:w-6 border-b-2 border-orange-500"></div>
                     </div>
