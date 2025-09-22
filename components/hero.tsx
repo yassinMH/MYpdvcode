@@ -138,7 +138,7 @@ export function Hero() {
                   <div className="text-center max-w-full">
                     <div className="relative w-full max-w-[120px] sm:max-w-[150px] md:max-w-[200px] lg:max-w-[250px] mx-auto">
                       <Image
-                        src="/images/vu-a-la-tv.jpeg"
+                        src="/images/vulatele.jpeg"
                         alt="Vu à la TV"
                         width={300}
                         height={300}
