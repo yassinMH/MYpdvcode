@@ -72,7 +72,7 @@ export function Footer() {
           <div>
             <h3 className="font-semibold text-white mb-3">Contact</h3>
             <ul className="space-y-1 md:space-y-2">
-              <li className="text-white/70">9h - 15h, Lundi au Vendredi</li>
+              <li className="text-white/70">9h - 19h, Lundi au Vendredi</li>
               <li>
                 <Link href="mailto:contact@my-pdv.com" className="text-white/70 hover:text-sky-300 transition-colors">
                   contact@my-pdv.com

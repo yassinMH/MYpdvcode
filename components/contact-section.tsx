@@ -98,7 +98,7 @@ export function ContactSection() {
             </div>
             <h3 className="text-lg font-semibold text-navy mb-2">Disponibilité</h3>
             <p className="text-navy/70">Lundi - Vendredi</p>
-            <p className="text-navy/70">9h00 - 17h00</p>
+            <p className="text-navy/70">9h00 - 19h00</p>
           </div>
 
           <div className="bg-green-50 p-6 rounded-lg text-center">
