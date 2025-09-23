@@ -38,7 +38,7 @@ export function Services() {
       icon: <Search className="h-10 w-10 text-navy" />,
       title: "Former vos équipes à l'excellence",
       description:
-        "Formation complète et sur-mesure de vos équipes à l'utilisation des outils et technologies installés pour une performance client optimale.",
+        "Former et sensibiliser vos équipes Lors de chaque installation, la formation et la sensibilisation de vos équipes font partie de nos priorités. C’est notre véritable engagement : garantir une installation durable et des équipes conscientes de l’importance opérationnelle de vos étiquettes.",
     },
   ]
 
