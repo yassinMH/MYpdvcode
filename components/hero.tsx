@@ -4,7 +4,7 @@ import { useState, useRef, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Volume2, VolumeX, Play } from "lucide-react"
+import { Volume2, VolumeX, Play, Pause, Newspaper } from "lucide-react"
 
 export function Hero() {
   const [isMuted, setIsMuted] = useState(true)
@@ -131,8 +131,15 @@ export function Hero() {
 
           {/* Zone vidéo avec écran de chargement - Centrée */}
           {/* Zone vidéo avec article au-dessus */}
-                    <div className="relative lg:order-2 flex flex-col items-center gap-4">
+          <div className="relative lg:order-2 flex flex-col items-center gap-4">
             {/* Article BFM TV - AU-DESSUS de la vidéo */}
+            <div className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 py-2 rounded-lg shadow-md flex items-center gap-2 w-full max-w-[400px] lg:max-w-none">
+              <Newspaper className="h-5 w-5" />
+              <div className="flex flex-col">
+                <span className="text-sm font-bold">Notre expertise reconnue</span>
+                <span className="text-xs opacity-90">Presse</span>
+              </div>
+            </div>
             <a
               href="https://www.bfmtv.com/economie/professionnels/retail-my-pdv-l-expert-francais-qui-garantit-la-fiabilite-derriere-chaque-etiquette-electronique_AB-202510020482.html"
               target="_blank"
