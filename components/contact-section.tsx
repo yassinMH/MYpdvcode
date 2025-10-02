@@ -114,14 +114,6 @@ export function ContactSection() {
             <p className="text-navy/70">9h00 - 19h00</p>
           </div>
 
-          <div className="bg-green-50 p-6 rounded-lg text-center">
-            <div className="w-12 h-12 rounded-full bg-green-500 flex items-center justify-center mx-auto mb-4">
-              <CheckCircle className="h-6 w-6 text-white" />
-            </div>
-            <h3 className="text-lg font-semibold text-navy mb-2">Réponse</h3>
-            <p className="text-navy/70">Sous 24h</p>
-            <p className="text-navy/70">en moyenne</p>
-          </div>
 
           <div className="bg-purple-50 p-6 rounded-lg text-center">
             <div className="w-12 h-12 rounded-full bg-purple-500 flex items-center justify-center mx-auto mb-4">
