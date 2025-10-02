@@ -13,11 +13,11 @@ export function Hero() {
   const [videoLoaded, setVideoLoaded] = useState(false)
   const videoRef = useRef<HTMLVideoElement>(null)
 
-  // Afficher l'image "VU À LA TV" pendant 1.5 secondes au lieu de 3
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowSplash(false)
-      // Démarrer la vidéo immédiatement après que l'image disparaisse
+
       setTimeout(() => {
         startVideo()
       }, 100) // Délai très court pour la transition
@@ -130,7 +130,40 @@ export function Hero() {
           </div>
 
           {/* Zone vidéo avec écran de chargement - Centrée */}
-          <div className="relative lg:order-2 flex justify-center">
+                    {/* Zone vidéo avec article au-dessus */}
+                    <div className="relative lg:order-2 flex flex-col items-center gap-4">
+            {/* Article BFM TV - AU-DESSUS de la vidéo */}
+            <a
+              href="https://www.bfmtv.com/economie/professionnels/retail-my-pdv-l-expert-francais-qui-garantit-la-fiabilite-derriere-chaque-etiquette-electronique_AB-202510020482.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block bg-white border-2 border-orange-500 rounded-lg p-3 md:p-4 hover:shadow-lg transition-shadow group w-full max-w-[400px] lg:max-w-none"
+            >
+              <div className="flex items-start gap-3">
+                <div className="flex-shrink-0">
+                  <div className="w-20 h-20 md:w-24 md:h-24 bg-gray-100 rounded-lg overflow-hidden">
+                    <Image
+                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-CVG2acKtivi00qQ090Ax1PB31zm3sw.png"
+                      alt="My PDV sur BFM TV"
+                      width={96}
+                      height={96}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="text-xs text-gray-500">BFM Business</span>
+                  </div>
+                  <h3 className="text-sm md:text-base font-bold text-navy mb-1 group-hover:text-orange-500 transition-colors line-clamp-2">
+                    My PDV : l'expert français qui garantit la fiabilité derrière chaque étiquette électronique
+                  </h3>
+                  <span className="text-xs text-orange-500 font-medium inline-block group-hover:underline">
+                    Lire l'article →
+                  </span>
+                </div>
+              </div>
+            </a>
             <div className="relative rounded-lg overflow-hidden shadow-xl bg-navy/5 aspect-video max-h-[200px] md:max-h-[300px] lg:max-h-none w-full max-w-[400px] lg:max-w-none">
               {/* Écran de chargement "VU À LA TV" */}
               {showSplash && (
