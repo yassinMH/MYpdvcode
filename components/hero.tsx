@@ -136,7 +136,7 @@ export function Hero() {
             <div className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 py-2 rounded-lg shadow-md flex items-center gap-2 w-full max-w-[400px] lg:max-w-none">
               <Newspaper className="h-5 w-5" />
               <div className="flex flex-col">
-                <span className="text-sm font-bold">Notre expertise reconnue</span>
+                <span className="text-sm font-bold">Ils parlent de nous</span>
                 <span className="text-xs opacity-90">Presse</span>
               </div>
             </div>
