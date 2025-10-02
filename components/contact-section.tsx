@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { toast } from "@/components/ui/use-toast"
-import { Mail, Loader2, Clock, CheckCircle, Users, Zap } from "lucide-react"
+import { Mail, Loader2,Phone , Clock, CheckCircle, Users, Zap } from "lucide-react"
 import { sendEmail } from "@/app/actions/send-email"
 
 export function ContactSection() {
@@ -92,6 +92,19 @@ export function ContactSection() {
             </a>
           </div>
 
+          <div className="bg-green-50 p-6 rounded-lg text-center">
+            <div className="w-12 h-12 rounded-full bg-green-500 flex items-center justify-center mx-auto mb-4">
+              <Phone className="h-6 w-6 text-white" />
+            </div>
+            <h3 className="text-lg font-semibold text-navy mb-2">Téléphone</h3>
+            <a
+              href="tel:+33185096780"
+              className="text-navy/70 hover:text-green-600 transition-colors"
+            >
+              +33 1 85 09 67 80
+            </a>
+          </div>
+
           <div className="bg-orange-50 p-6 rounded-lg text-center">
             <div className="w-12 h-12 rounded-full bg-orange-500 flex items-center justify-center mx-auto mb-4">
               <Clock className="h-6 w-6 text-white" />
@@ -110,15 +123,7 @@ export function ContactSection() {
             <p className="text-navy/70">en moyenne</p>
           </div>
 
-          <div className="bg-purple-50 p-6 rounded-lg text-center">
-            <div className="w-12 h-12 rounded-full bg-purple-500 flex items-center justify-center mx-auto mb-4">
-              <Users className="h-6 w-6 text-white" />
-            </div>
-            <h3 className="text-lg font-semibold text-navy mb-2">Support</h3>
-            <p className="text-navy/70">Équipe dédiée</p>
-            <p className="text-navy/70">et experte</p>
-          </div>
-        </div>
+
 
         {/* Section des avantages */}
         <div className="bg-gradient-to-r from-sky-50 to-orange-50 p-8 rounded-lg mb-12">
