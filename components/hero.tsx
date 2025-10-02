@@ -143,7 +143,7 @@ export function Hero() {
                 <div className="flex-shrink-0">
                   <div className="w-20 h-20 md:w-24 md:h-24 bg-gray-100 rounded-lg overflow-hidden">
                     <Image
-                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-CVG2acKtivi00qQ090Ax1PB31zm3sw.png"
+                      src="https://tfh2ceao6hcwdtya.public.blob.vercel-storage.com/My-PDV-etiquette-electronique-2148126.webp"
                       alt="My PDV sur BFM TV"
                       width={96}
                       height={96}
