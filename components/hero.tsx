@@ -130,7 +130,7 @@ export function Hero() {
           </div>
 
           {/* Zone vidéo avec écran de chargement - Centrée */}
-                    {/* Zone vidéo avec article au-dessus */}
+          {/* Zone vidéo avec article au-dessus */}
                     <div className="relative lg:order-2 flex flex-col items-center gap-4">
             {/* Article BFM TV - AU-DESSUS de la vidéo */}
             <a
@@ -144,7 +144,7 @@ export function Hero() {
                   <div className="w-20 h-20 md:w-24 md:h-24 bg-gray-100 rounded-lg overflow-hidden">
                     <Image
                       src="https://tfh2ceao6hcwdtya.public.blob.vercel-storage.com/My-PDV-etiquette-electronique-2148126.webp"
-                      alt="My PDV sur BFM TV"
+                      alt="My PDV sur BFM Business"
                       width={96}
                       height={96}
                       className="w-full h-full object-cover"
@@ -158,8 +158,12 @@ export function Hero() {
                   <h3 className="text-sm md:text-base font-bold text-navy mb-1 group-hover:text-orange-500 transition-colors line-clamp-2">
                     My PDV : l'expert français qui garantit la fiabilité derrière chaque étiquette électronique
                   </h3>
+                  <p className="text-xs text-navy/60 mb-2 line-clamp-2">
+                    Depuis plusieurs années, My-PDV a installé plus de 13 millions d'étiquettes dans 1 200 magasins.
+                    Carrefour, Monoprix, Intermarché, Leclerc, Casino...
+                  </p>
                   <span className="text-xs text-orange-500 font-medium inline-block group-hover:underline">
-                    Lire l'article →
+                    Lire la suite →
                   </span>
                 </div>
               </div>
