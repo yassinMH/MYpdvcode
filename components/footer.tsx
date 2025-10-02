@@ -78,6 +78,11 @@ export function Footer() {
                   contact@my-pdv.com
                 </Link>
               </li>
+              <li>
+                <Link href="tel:+33185096780"className="text-white/70 hover:text-sky-300 transition-colors">
+                  +33 1 85 09 67 80
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
