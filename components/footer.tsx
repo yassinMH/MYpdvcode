@@ -89,7 +89,7 @@ export function Footer() {
         <div className="mt-8 pt-6 md:mt-12 md:pt-8 border-t border-white/10 text-center">
           <p className="text-white/70">&copy; {new Date().getFullYear()} My PDV. Tous droits réservés.</p>
           <a
-            href="https://rpms-tunisie.com/"
+            href="https://www.rpms-tunisie.com/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white/50 hover:text-sky-300 transition-colors block mt-2"
